@@ -1,0 +1,17 @@
+name = "test"
+main = "src/index.js"
+workers_dev = true
+minify = false
+node_compat = true
+compatibility_date = "2022-05-20"
+vars = { ENVIRONMENT = "dev", NODE_ENV = "development" }
+
+[env.production]
+minify = true
+node_compat = true
+vars = { NODE_ENV = "production", ENVIRONMENT = "production" }
+
+[env.staging]
+minify = true
+node_compat = true
+vars = { ENVIRONMENT = "staging", NODE_ENV = "production" }
